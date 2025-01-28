@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://danieldouradofsa:U6bQvtVo4oB9QBv6@mern.dborq.mongodb.net/?retryWrites=true&w=majority&appName=MERN",
+    "jwtSecret": "mySecretToken",
+    "githubClientId": "Ov23liValRiMPMx7ujnB",
+    "githubSecret": "6993728ceb6c5d385ddf8ec9069c02aff3ee8ff2"
+}
