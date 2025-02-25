@@ -8,6 +8,10 @@ import Dashboard from './components/dashboard/Dashboard';
 import ProfileForm from './components/profile-forms/ProfileForm';
 import AddExperience from './components/profile-forms/AddExperience';
 import AddEducation from './components/profile-forms/AddEducation';
+import Profiles from './components/profiles/Profiles';
+import Profile from './components/profile/Profile';
+import Posts from './components/posts/Posts';
+import Post from './components/post/Post';
 import Layout from "./Layout";
 import Alert from './components/layout/Alert'
 import PrivateRoute from './components/routing/PrivateRoute'
@@ -44,6 +48,8 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="profiles" element={<Profiles />} />
+            <Route path="profile/:id" element={<Profile />} />
             <Route
               path="dashboard"
               element={<PrivateRoute component={Dashboard} />}
@@ -64,6 +70,9 @@ function App() {
               path="add-education"
               element={<PrivateRoute component={AddEducation} />}
             />
+            <Route path="posts" element={<PrivateRoute component={Posts} />} />
+            <Route path="posts/:id" element={<PrivateRoute component={Post} />} />
+            <Route path="/*" element={<NotFound />} />
           </Route>
         </Routes>
       </Router>
